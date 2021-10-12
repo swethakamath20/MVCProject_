@@ -1,0 +1,75 @@
+﻿
+@model MVCProject.ViewModels.LeaveViewModel
+@using System.Web.Optimization
+
+@{ 
+    @Styles.Render("~/Styles/bootstrap")
+@Styles.Render("~/Styles/site")
+@Scripts.Render("~/Scripts/bootstrap")
+
+}
+<table class="table">
+    <tr>
+        <td>Employee Name:</td>
+        <td>@Model.EmployeeName</td>
+    </tr>
+    <tr>
+        <td>Designation:</td>
+        <td>@Model.designation</td>
+    </tr>
+    <tr>
+        <td>Leave From:</td>
+        <td>
+            @Model.StartDate
+        </td>
+    </tr>
+    <tr>
+        <td>Leave Till:</td>
+        <td>
+            @Model.EndDate
+        </td>
+    </tr>
+    <tr>
+        <td>Leave Reason</td>
+        <td>
+            @Model.LeaveReason
+        </td>
+    </tr>
+    
+    <tr>
+
+        @if (Model.LeaveStatus == "Pending")
+        {
+            <td><a href="#" class="btn btn-warning">@Model.LeaveStatus</a></td>
+}
+        @if (Model.LeaveStatus == "Accepted")
+        {
+            <td><a href="#" class="btn btn-success">@Model.LeaveStatus</a></td>
+}
+        @if (Model.LeaveStatus == "Rejected")
+        {
+            <td><a href="#" class="btn btn-danger">@Model.LeaveStatus</a></td>
+}</tr>
+    <tr>
+        <td>
+            <form action="/leave/ViewLeaveRequests" method="post">
+
+                <input name="LeaveRequestID" value=@Model.LeaveID type="text" hidden />
+                <input name="LeaveStatus" value="Accepted" type="text" hidden />
+                <input type="submit" class="btn btn-success" value="Accept" />
+            </form>
+
+        </td>
+
+        <td>
+            <form action="/leave/ViewLeaveRequests" method="post">
+
+                <input name="LeaveID" value=@Model.LeaveID type="text" hidden />
+                <input name="LeaveStatus" value="Rejected" type="text" hidden />
+                <input type="submit" class="btn btn-danger" value="Reject" />
+            </form>
+
+    </tr>
+    
+
+</table>

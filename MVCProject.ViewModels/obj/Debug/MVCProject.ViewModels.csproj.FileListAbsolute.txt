@@ -1,0 +1,12 @@
+C:\Users\dell\Desktop\Project\MVCProject.ViewModels\bin\Debug\MVCProject.ViewModels.dll
+C:\Users\dell\Desktop\Project\MVCProject.ViewModels\bin\Debug\MVCProject.ViewModels.pdb
+C:\Users\dell\Desktop\Project\MVCProject.ViewModels\obj\Debug\MVCProject.ViewModels.csproj.AssemblyReference.cache
+C:\Users\dell\Desktop\Project\MVCProject.ViewModels\obj\Debug\MVCProject.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\Project\MVCProject.ViewModels\obj\Debug\MVCProject.ViewModels.dll
+C:\Users\dell\Desktop\Project\MVCProject.ViewModels\obj\Debug\MVCProject.ViewModels.pdb
+C:\Users\dell\Desktop\Project\MVCProject.ViewModels\bin\Debug\MVCProject.ViewModels.dll.config
+C:\Users\dell\Desktop\Project\MVCProject.ViewModels\bin\Debug\EntityFramework.dll
+C:\Users\dell\Desktop\Project\MVCProject.ViewModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dell\Desktop\Project\MVCProject.ViewModels\bin\Debug\EntityFramework.xml
+C:\Users\dell\Desktop\Project\MVCProject.ViewModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dell\Desktop\Project\MVCProject.ViewModels\obj\Debug\MVCProject.ViewModels.csproj.CopyComplete

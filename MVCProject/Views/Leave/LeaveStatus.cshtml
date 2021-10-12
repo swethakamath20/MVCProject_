@@ -1,0 +1,27 @@
+﻿@model List<MVCProject.ViewModels.LeaveViewModel>
+@using System.Web.Optimization;
+
+@{
+    ViewBag.Title= "Leave Status";
+@Styles.Render("~/Styles/bootstrap")
+@Styles.Render("~/Styles/site")
+@Scripts.Render("~/Scripts/bootstrap")
+}
+
+<table class="table">
+    <tr>
+        <th>From Date</th>
+        <th>To Date</th>
+        <th>Leave Reason</th>
+        <th>Leave Status</th>
+    </tr>
+    @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.StartDate.ToString("dd-MM-yyyy")</td>
+                    <td>@item.EndDate.ToString("dd-MM-yyyy")</td>
+                    <td>@item.LeaveReason</td>
+                    <td>@item.LeaveStatus</td>
+                </tr>
+            }
+</table>

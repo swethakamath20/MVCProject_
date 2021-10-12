@@ -1,0 +1,157 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <title>@ViewBag.Title </title>
+    @Styles.Render("~/Styles/bootstrap")
+    @Styles.Render("~/Styles/site")
+    @Scripts.Render("~/Scripts/bootstrap")
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>QBurst</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                @if (Session["CurrentEmployeeEmail"] == null)
+                {
+                    <li>
+                        <a href="/Account/Login">Login</a>
+                    </li>
+                }
+
+                <li>
+
+                    <a href="/Home/Index">Home</a>
+
+                </li>
+                @if (Session["CurrentEmployeeEmail"] != null)
+                {
+                    <li>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">My Profile</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="/Account/MyProfile">View Profile</a>
+                            </li>
+                            <li>
+                                <a href="/Account/EditProfile">Edit Profile</a>
+                            </li>
+                        </ul>
+                    </li>
+                }
+                @if (Session["CurrentEmployeeEmail"] != null)
+                {
+                    if ((Session["CurrentEmployeeRoleID"]) is 2)
+                    {
+                        <li>
+                            <a href="Leave/ViewLeaveRequests">Leave Requests</a>
+                        </li>
+                    }
+                    else if ((Session["CurrentEmployeeRoleID"]) is 3)
+                    {
+                        <li>
+                            <a href="#EmpSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Employee Portal</a>
+                            <ul class="collapse list-unstyled" id="EmpSubmenu">
+                                <li>
+                                    <a href="/Account/ViewAllEmployees">View All</a>
+                                </li>
+                                <li>
+                                    <a href="/Account/AddEmployee">Add Employee</a>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <a href="#LeaveSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Leave Portal</a>
+                            <ul class="collapse list-unstyled" id="LeaveSubmenu">
+                                <li>
+                                    <a href="/Leave/LeaveRequest">Request Leave</a>
+                                </li>
+                                <li>
+                                    <a href="/Leave/LeaveStatus">View Status</a>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+                }
+
+
+                <li>
+                    <a href="#">About</a>
+                </li>
+                @*@if (Session["CurrentEmployeeEmail"] != null)
+        {
+            <li>
+                <a href="#">Change Password</a>
+            </li>
+        }*@
+
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            @if (Session["CurrentEmployeeEmail"] != null)
+            {<ul class="list-unstyled CTAs">
+                    <li>
+                        <a href="/Account/Logout" class="download">Logout</a>
+                    </li>
+
+                </ul>}
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    <form  action="/home/search">
+                        <div class="form-group">
+                            
+                            <select name="RoleID">
+                                <option value="0">All</option>
+                                <option value="1">Employee</option>
+                                <option value="2">Project Manager</option>
+                                <option value="3">HR</option>
+                            </select>
+                        </div>
+                        <div class="form-inline">
+                            <input type="search" class="form-control mr-sm-2" style="width:150px" placeholder="Search" name="str">
+                            <button class="btn btn-success">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+            @RenderBody()
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+        
+    </script>
+
+</body>
+</html>

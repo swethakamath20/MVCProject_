@@ -1,0 +1,17 @@
+﻿@model List<MVCProject.ViewModels.EmployeeViewModel>
+@{
+    ViewBag.Title = "Search";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h3>Search results for @ViewBag.str</h3>
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                Html.RenderPartial("Profile", item);
+            }
+        </table>
+    </div>
+</div>
+

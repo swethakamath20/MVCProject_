@@ -1,0 +1,15 @@
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\bin\Debug\MVCProject.Repositories.dll
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\bin\Debug\MVCProject.Repositories.pdb
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\obj\Debug\MVCProject.Repositories.csproj.AssemblyReference.cache
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\obj\Debug\MVCProject.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\obj\Debug\MVCProject.Repositories.dll
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\obj\Debug\MVCProject.Repositories.pdb
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\bin\Debug\MVCProject.DomainModels.dll
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\bin\Debug\EntityFramework.dll
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\bin\Debug\MVCProject.DomainModels.pdb
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\bin\Debug\MVCProject.DomainModels.dll.config
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\bin\Debug\EntityFramework.xml
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\obj\Debug\MVCProject.Repositories.csproj.CopyComplete
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\bin\Debug\MVCProject.Repositories.dll.config
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dell\Desktop\Project\MVCProject.Repositories\bin\Debug\EntityFramework.SqlServer.xml

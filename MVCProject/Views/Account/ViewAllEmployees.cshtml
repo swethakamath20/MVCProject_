@@ -1,0 +1,20 @@
+﻿
+@model List<MVCProject.ViewModels.EmployeeViewModel>
+   <h1 align="center">Employee List</h1>
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.FirstName @item.LastName</td>
+            <td>@item.Designation</td>
+            <td><a href="/home/ProfileView/@item.employeeID" class="text-primary"/>View</td>
+            <td><a href="/Account/Update/@item.employeeID" class="text-primary"/>Update</td>
+            <td><a href="/account/DeleteEmployee/@item.employeeID" class="text-primary"/>Delete</td>
+        </tr>
+        }
+    </table>
